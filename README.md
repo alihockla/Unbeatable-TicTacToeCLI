@@ -3,6 +3,8 @@
 TicTacToeCLI is exactly what the name suggests - TicTacToe playable through the Command Line Interface.<br>
 Play against a friend or an unbeatable bot.
 
+![Alt text](/Unbeatable-TicTacToeCLI/resources/TTT-screenshot.png?raw=true "SS")
+
 ## Installation
 
 Clone the repo or download the zip. Then navigate to the TicTacToeCLI/src directory and compile the java files:
