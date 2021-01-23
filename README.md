@@ -1,2 +1,27 @@
-# Unbeatable-TicTacToeCLI
-TicTacToe playable through the Command Line Interface. Play against a friend or an unbeatable bot.
+# [Unbeatable] TicTacToeCLI
+
+TicTacToeCLI is exactly what the name suggests - TicTacToe playable through the Command Line Interface.<br>
+Play against a friend or an unbeatable bot.
+
+## Installation
+
+Clone the repo or download the zip. Then navigate to the TicTacToeCLI/src directory and compile the java files:
+
+```java
+javac main/*.java
+```
+
+## Usage
+From the same TicTacToeCLI/src directory run the following to run the game:
+
+```
+java main/Game
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
