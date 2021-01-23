@@ -3,7 +3,7 @@
 TicTacToeCLI is exactly what the name suggests - TicTacToe playable through the Command Line Interface.<br>
 Play against a friend or an unbeatable bot.
 
-![Alt text](/Unbeatable-TicTacToeCLI/resources/TTT-screenshot.png?raw=true "SS")
+![Alt text](resources/TTT-screenshot.png?raw=true "SS")
 
 ## Installation
 
