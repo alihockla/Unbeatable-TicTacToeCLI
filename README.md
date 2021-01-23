@@ -12,6 +12,7 @@ Clone the repo or download the zip. Then navigate to the TicTacToeCLI/src direct
 ```java
 javac main/*.java
 ```
+*Note: Java SDK required*
 
 ## Usage
 From the same TicTacToeCLI/src directory run the following to run the game:
