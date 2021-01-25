@@ -1,6 +1,6 @@
 # [Unbeatable] TicTacToeCLI
 
-TicTacToe playable through the Command Line Interface.<br>
+TicTacToe playable through a Command Line Interface.<br>
 Play against a friend or an unbeatable bot.
 
 ![Alt text](resources/TTT-screenshot.png?raw=true "SS")
