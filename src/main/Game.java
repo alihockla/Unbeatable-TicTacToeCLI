@@ -152,6 +152,13 @@ public class Game {
 		 * Winning is almost impossible unless a major mistake is made by the opponent.
 		 */
 		if (moves.containsKey(4)) {
+			// if opponent takes 2 corners, ai should take a side (given ai already has the center)
+			if (opponentForked()) {
+				if (!moves.containsKey(1)) return 1;
+				if (!moves.containsKey(3)) return 3;
+				if (!moves.containsKey(5)) return 5;
+				if (!moves.containsKey(7)) return 7;
+			}
 			if (!moves.containsKey(0)) return 0;
 			else if (!moves.containsKey(2)) return 2;
 			else if (!moves.containsKey(6)) return 6;
@@ -193,6 +200,24 @@ public class Game {
 		if (!moves.containsKey(7)) return 7;
 		
 		return -1;
+	}
+
+	/*
+	 * Check if opponent has 2 corners
+	 */
+	private boolean opponentForked() {
+		if ((moves.containsKey(2) && moves.containsKey(6)) || (moves.containsKey(2) && moves.containsKey(8)) ||
+				(moves.containsKey(2) && moves.containsKey(0))) {
+			return moves.get(2) == "X";
+		} else if ((moves.containsKey(0) && moves.containsKey(6)) || (moves.containsKey(0) && moves.containsKey(8)) ||
+				(moves.containsKey(2) && moves.containsKey(0))) {
+			return moves.get(0) == "X";
+		} else if ((moves.containsKey(8) && moves.containsKey(6)) || (moves.containsKey(0) && moves.containsKey(8)) ||
+				(moves.containsKey(2) && moves.containsKey(8))) {
+			return moves.get(8) == "X";
+		}
+		
+		return false;
 	}
 
 	/*
@@ -410,6 +435,19 @@ public class Game {
     private void restartGame() {
     	init();
     }
+
+	private static String[][] copyMatrix(String[][] matrix) {
+		String[][] newMatrix = new String[matrix.length][];
+		for(int i = 0; i < matrix.length; i++)
+		{
+			String[] aMatrix = matrix[i];
+			int aLength = aMatrix.length;
+			newMatrix[i] = new String[aLength];
+			System.arraycopy(aMatrix, 0, newMatrix[i], 0, aLength);
+		}
+		
+		return newMatrix;
+	}
 
 	private void displayBoard() {
 		System.out.println("   Board");
